@@ -1,0 +1,57 @@
+{
+  "name": "transducers-ts",
+  "version": "0.1.0",
+  "description": "A modern TypeScript implementation of the classical JavaScript transducer protocol, with Iterable, AsyncIterable, and RxJS 7.8.2 adapters.",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./rxjs": {
+      "types": "./dist/rxjs/index.d.ts",
+      "import": "./dist/rxjs/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hansschenker/transducers-ts.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "transducer",
+    "transducers",
+    "functional-programming",
+    "typescript",
+    "iterable",
+    "async-iterable",
+    "rxjs"
+  ],
+  "peerDependencies": {
+    "rxjs": "7.8.2"
+  },
+  "peerDependenciesMeta": {
+    "rxjs": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "rxjs": "7.8.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
